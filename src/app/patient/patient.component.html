@@ -1,0 +1,128 @@
+
+<article class="table-header">
+    <button mat-raised-button color="primary" class="primary" (click)="addRow()">Add Patient</button>
+  </article>
+  <div>
+    <fieldset [formGroup]="form" *ngIf="displayForm">
+
+        <mat-form-field>
+    
+            <input matInput
+                   placeholder="Full Name"
+                   formControlName="name">
+    
+        </mat-form-field>
+        
+            <div>
+              <div>  <label>Gender:</label> </div>
+            <input id="male" type="radio" class="custom-control-input" value="male" name="gender" formControlName="gender">
+            <label class="custom-control-label" for="male">Male</label>
+            </div>
+            <div>
+                <input id="female" type="radio" class="custom-control-input" value="female" name="gender" formControlName="gender">
+                 <label class="custom-control-label" for="male">Female</label>
+            </div>
+           
+        <mat-form-field>
+    
+            <input matInput
+                   placeholder="Phone"
+                   formControlName="phone">
+    
+        </mat-form-field>
+    
+        <mat-form-field>
+    
+            <input matInput
+                   placeholder="Address"
+                   formControlName="address">
+    
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Reporting Doctor Name</mat-label>
+            <mat-select formControlName="doctorname">
+                <mat-option  [value]="doctor.id" *ngFor="let doctor of doctorDetails">{{ doctor.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="buttonCustom">
+          <span>
+         <button mat-raised-button color="primary" (click)= "saveNewPatient()" [disabled]="!form.valid">
+            Save
+          </button>
+         </span>
+         <span>
+          <button mat-raised-button color="primary" (click)= "cancel()">
+            Cancel
+          </button>
+          </span>
+          </div>
+    </fieldset>
+</div>
+<table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> 
+        <span *ngIf="!element.editable; else editPlace">
+        {{element.name}}
+        </span>
+        <ng-template #editPlace>
+          <input [(ngModel)]="element.name" (keyup.enter)="element.editable = false" >
+        </ng-template>
+       </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef> Gender </th>
+      <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef> Phone </th>
+      <td mat-cell *matCellDef="let element"> 
+        <span *ngIf="!element.editable; else editPlace">
+          {{element.mobileNumber}}
+          </span>
+          <ng-template #editPlace>
+            <input [(ngModel)]="element.mobileNumber" (keyup.enter)="element.editable = false" >
+          </ng-template>
+         </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> 
+        <span *ngIf="!element.editable; else editPlace">
+          {{element.address}}
+          </span>
+          <ng-template #editPlace>
+            <input [(ngModel)]="element.address" (keyup.enter)="element.editable = false" >
+          </ng-template>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="doctorname">
+      <th mat-header-cell *matHeaderCellDef> Reporting Doctor Name </th>
+      <td mat-cell *matCellDef="let element"> {{'Dr ' + element.doctorFullName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element">
+        <a mat-button *ngIf="!element.editable" style="color: rgb(80, 112, 202);"  (click)="editPatient(element)">Edit</a>
+        <a mat-button *ngIf="element.editable" style="color: rgb(80, 112, 202);" (click) = "updatePatient(element)">Save</a>
+        <a mat-button style="color: rgb(80, 112, 202);"  (click)="deletePatient(element.id)">Delete</a>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayPatientColumns;"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayPatientColumns;"></tr>
+  
+  </table>

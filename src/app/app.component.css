@@ -1,0 +1,10 @@
+
+a {   
+  color: rgb(80, 112, 202);;   
+}
+a:hover {
+  color:rgba(97, 36, 99, 0.623);
+}
+a:active {
+  color: blueviolet;
+}

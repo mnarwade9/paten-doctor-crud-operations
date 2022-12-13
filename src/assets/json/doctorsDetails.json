@@ -1,0 +1,22 @@
+{
+    "doctors": [
+      {
+        "did": 1,
+        "title": "Dr",
+        "specialization": "Eye Specialist",
+        "name": "Sushant Patil",
+        "gender": "Male",
+        "mobileNumber": "0524845582",
+        "address": "DSO"
+      },
+       {
+        "did": 2,
+        "title": "Dr",
+        "specialization": "General Physician",
+        "name": "Jaya Deshmukh",
+        "gender": "Female",
+        "mobileNumber": "0524815582",
+        "address": "Jabel Ali"
+      }
+    ]
+  }

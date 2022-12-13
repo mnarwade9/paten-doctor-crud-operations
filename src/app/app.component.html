@@ -1,0 +1,19 @@
+
+<mat-card class="example-card">
+    <mat-card-title >Welcome to The HealthCare System</mat-card-title>
+    <mat-card-subtitle >
+  
+     This Application Helps in performing Display/Addition/Updation & Deletion of the Doctor-Patient Details.
+   
+    </mat-card-subtitle>
+    <mat-card-content>
+    <mat-card-actions>
+        <a  [routerLink]="['patient']">Patient</a> |
+        <a href="#" [routerLink]="['doctor']">Doctor</a>
+        <hr />
+    </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+
+
+<router-outlet></router-outlet>

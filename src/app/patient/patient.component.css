@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+    margin-left: 10px;
+  }
+  th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    color: rgb(80, 112, 202);
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .table-header {
+    margin: 10px;
+  }
+  .buttonCustom span{
+    padding: 5px;
+  }

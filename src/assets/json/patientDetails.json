@@ -1,0 +1,49 @@
+{
+    "patients": [
+      {
+        "pid": 1,
+        "name": "Mohini Narwade",
+        "gender": "Female",
+        "mobileNumber": "0524845582",
+        "address": "DSO",
+        "doctorId": 1,
+        "doctorFullName": "Sushant Patil"
+      },
+      {
+        "pid": 2,
+        "name": "Aman Lodha",
+        "gender": "Male",
+        "mobileNumber": "0522262709",
+        "address": "DSO",
+        "doctorId": 1,
+        "doctorFullName": "Sushant Patil"
+      },
+      {
+        "pid": 3,
+       "name": "Sunita Patil",
+        "gender": "Female",
+        "mobileNumber": "0524845581",
+        "address": "Jabel Ali",
+        "doctorId": 2,
+        "doctorFullName": "Jaya Deshmukh"
+      },
+      {
+        "pid": 4,
+        "name": "Avyaansh Hirave",
+        "gender": "Male",
+        "mobileNumber": "0524845583",
+        "address": "Palm Jumeirah",
+        "doctorId": 2,
+        "doctorFullName": "Jaya Deshmukh"
+      },
+      {
+        "pid": 5,
+        "name": "Sagar Hirave",
+        "gender": "Male",
+        "mobileNumber": "0524845782",
+        "address": "Meydan",
+        "doctorId": 1,
+        "doctorFullName": "Sushant Patil"
+      }
+    ]
+  }

@@ -1,0 +1,80 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Mohini Patil",
+      "gender": "Female",
+      "mobileNumber": "0524845589",
+      "address": "DSO",
+      "doctorId": 1,
+      "doctorFullName": "Sushant Patil",
+      "editable": false
+    },
+    {
+      "id": 3,
+      "name": "Sunita Patil",
+      "gender": "Female",
+      "mobileNumber": "0524845581",
+      "address": "Jabel Ali",
+      "doctorId": 2,
+      "doctorFullName": "Jaya Deshmukh"
+    },
+    {
+      "id": 4,
+      "name": "Avyaansh Hirave",
+      "gender": "Male",
+      "mobileNumber": "0524845583",
+      "address": "Palm Jumeirah",
+      "doctorId": 2,
+      "doctorFullName": "Jaya Deshmukh"
+    },
+    {
+      "id": 5,
+      "name": "Sagar Hirave",
+      "gender": "Male",
+      "mobileNumber": "0524845782",
+      "address": "Meydan",
+      "doctorId": 1,
+      "doctorFullName": "Sushant Patil"
+    },
+    {
+      "id": 7,
+      "name": "Mahi Sharma",
+      "gender": "female",
+      "mobileNumber": "0547577575",
+      "address": "DSO",
+      "doctorId": 3,
+      "doctorFullName": "Mohini Lodha"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "title": "Dr",
+      "specialization": "Eye Specialist",
+      "name": "Sushant Patil",
+      "gender": "Male",
+      "mobileNumber": "0524845582",
+      "address": "Dubai Silicon Oasis",
+      "editable": false
+    },
+    {
+      "id": 2,
+      "title": "Dr",
+      "specialization": "General Physician",
+      "name": "Jaya Deshmukh",
+      "gender": "Female",
+      "mobileNumber": "0524815582",
+      "address": "Jabel Ali"
+    },
+    {
+      "id": 3,
+      "name": "Mohini Lodha",
+      "gender": "female",
+      "mobileNumber": "0524846676",
+      "address": "DSO",
+      "specialization": "Gynecologist",
+      "editable": false
+    }
+  ]
+}
